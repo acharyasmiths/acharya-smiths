@@ -68,13 +68,17 @@
     }
 
     .scroll {
-      position: absolute;
-      bottom: 30px;
-      font-size: 14px;
-      color: #c5a46d;
-      animation: bounce 2s infinite;
-      cursor: pointer;
-    }
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  color: #c5a46d;
+  text-align: center;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
 
     /* NEXT SECTION */
     .section {
@@ -125,8 +129,10 @@
       <p>Crafted by Hand. Defined by Legacy.</p>
     </div>
 
-    <div class="scroll" onclick="scrollToNext()">↓ Discover</div>
-  </div>
+    <div class="scroll" onclick="scrollToNext()">
+  <div style="font-size: 20px;">↓</div>
+  <div>Discover</div>
+</div>
 
   <!-- NEXT SECTION -->
   <div class="section" id="next">
