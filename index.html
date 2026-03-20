@@ -6,15 +6,19 @@
   <title>Acharya Smiths</title>
 
   <style>
-    body, html {
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
       margin: 0;
-      padding: 0;
-      height: 100%;
       font-family: 'Georgia', serif;
       color: white;
       overflow-x: hidden;
+      background: #0f0f0f;
     }
 
+    /* HERO SECTION */
     .hero {
       position: relative;
       height: 100vh;
@@ -69,6 +73,29 @@
       font-size: 14px;
       color: #c5a46d;
       animation: bounce 2s infinite;
+      cursor: pointer;
+    }
+
+    /* NEXT SECTION */
+    .section {
+      height: 100vh;
+      background: #f8f6f2;
+      color: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      color: #555;
+      max-width: 400px;
     }
 
     @keyframes fadeIn {
@@ -85,6 +112,7 @@
 
 <body>
 
+  <!-- HERO -->
   <div class="hero">
     <video autoplay muted loop playsinline>
       <source src="DE028DC8-8EFB-4B72-909C-5D55BE438479.mp4" type="video/mp4">
@@ -97,8 +125,24 @@
       <p>Crafted by Hand. Defined by Legacy.</p>
     </div>
 
-    <div class="scroll">↓ Discover</div>
+    <div class="scroll" onclick="scrollToNext()">↓ Discover</div>
   </div>
+
+  <!-- NEXT SECTION -->
+  <div class="section" id="next">
+    <div>
+      <h2>100 Years of Craftsmanship</h2>
+      <p>
+        From traditional handwork to modern precision, Acharya Smiths blends heritage with innovation to create timeless jewellery.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function scrollToNext() {
+      document.getElementById("next").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
 
 </body>
 </html>
