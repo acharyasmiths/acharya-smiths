@@ -101,6 +101,52 @@
       max-width: 400px;
     }
 
+    .split-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 10%;
+  background: #f8f6f2;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.split-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+}
+
+.split-text {
+  max-width: 500px;
+}
+
+.split-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.split-text p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 24px;
+  border: 1px solid #c5a46d;
+  color: #c5a46d;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #c5a46d;
+  color: #000;
+}
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -143,6 +189,20 @@
       </p>
     </div>
   </div>
+
+  <div class="split-section">
+  <div class="split-image">
+    <img src="your-image.png" alt="Jewellery">
+  </div>
+
+  <div class="split-text">
+    <h2>Explore Our Collection</h2>
+    <p>
+      Discover finely crafted jewellery designed with precision and passion. Each piece reflects timeless elegance and modern craftsmanship.
+    </p>
+    <a href="#" class="btn">View Gallery</a>
+  </div>
+</div>
 
   <script>
     function scrollToNext() {
